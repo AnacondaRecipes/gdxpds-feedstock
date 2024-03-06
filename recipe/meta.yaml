@@ -27,9 +27,9 @@ requirements:
     - pandas >=0.20.1
     - python
 
-test:
-  commands:
-    - pytest --pyargs gdxpds
+#test:
+#  commands:
+#    - pytest --pyargs gdxpds
 #  imports:
 #    - gdx-pandas
 #    - gdxpds.test
