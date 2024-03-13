@@ -28,6 +28,8 @@ requirements:
     - python
 
 test:
+  requires:
+    - pip
   commands:
     - pip check
   imports:
@@ -36,7 +38,7 @@ test:
 
 about:
   home: "https://github.com/NREL/gdx-pandas"
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
