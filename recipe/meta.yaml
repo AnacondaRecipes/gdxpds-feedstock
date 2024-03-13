@@ -42,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  description: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
+  summary: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
   doc_url: https://nrel.github.io/gdx-pandas/
   dev_url: https://nrel.github.io/gdx-pandas/
 
