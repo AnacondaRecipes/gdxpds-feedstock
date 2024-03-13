@@ -10,7 +10,6 @@ source:
   sha256: 3956e9fefec844d2727b11c43f5276a25fb2540ff6e4eb3e085239422f5ef2be
 
 build:
-  noarch: python
   number: 0
   script: "{{ PYTHON }} -m  pip install --no-deps --no-build-isolation . -vv"
 
@@ -21,6 +20,7 @@ requirements:
     - pandas >=0.20.1
     - pip
     - python
+    - wheel
   run:
     - gdxcc
     - numpy >=1.7
@@ -28,20 +28,20 @@ requirements:
     - python
 
 test:
-#  commands:
-#    - pytest --pyargs gdxpds
+  commands:
+    - pip check
   imports:
-    - gdx-pandas
+    - gdxpds
     - gdxpds.test
 
 about:
   home: "https://github.com/NREL/gdx-pandas"
-  license: UNKNOWN
-  license_family: OTHER
-  license_file: 
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
   summary: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
-  doc_url: 
-  dev_url: 
+  doc_url: https://nrel.github.io/gdx-pandas/
+  dev_url: https://nrel.github.io/gdx-pandas/
 
 extra:
   anaconda-services:
