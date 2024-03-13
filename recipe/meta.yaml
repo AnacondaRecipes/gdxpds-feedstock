@@ -1,0 +1,55 @@
+{% set name = "gdxpds" %}
+{% set version = "1.4.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 3956e9fefec844d2727b11c43f5276a25fb2540ff6e4eb3e085239422f5ef2be
+
+build:
+  number: 0
+  skip: true # [linux-aarch64]
+  script: "{{ PYTHON }} -m  pip install --no-deps --no-build-isolation . -vv"
+
+requirements:
+  host:
+    - gdxcc
+    - numpy >=1.7
+    - pandas >=0.20.1
+    - pip
+    - python
+    - wheel
+  run:
+    - gdxcc
+    - numpy >=1.7
+    - pandas >=0.20.1
+    - python
+
+test:
+  requires:
+    - pip
+  commands:
+    - pip check
+  imports:
+    - gdxpds
+    - gdxpds.test
+
+about:
+  home: "https://github.com/NREL/gdx-pandas"
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
+  doc_url: https://nrel.github.io/gdx-pandas/
+  dev_url: https://nrel.github.io/gdx-pandas/
+
+extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/46266
+    reason: Client request
+  recipe-maintainers:
+    - ianaobi
+    - bkreider
