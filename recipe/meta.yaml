@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: true # [linux-aarch64]
   script: "{{ PYTHON }} -m  pip install --no-deps --no-build-isolation . -vv"
 
 requirements:
@@ -41,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
+  description: "gdx-pandas is a python package to translate between gdx (GAMS data) and pandas"
   doc_url: https://nrel.github.io/gdx-pandas/
   dev_url: https://nrel.github.io/gdx-pandas/
 
