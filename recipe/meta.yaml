@@ -28,11 +28,11 @@ requirements:
     - python
 
 test:
-  commands:
-    - pytest --pyargs gdxpds
-#  imports:
-#    - gdx-pandas
-#    - gdxpds.test
+#  commands:
+#    - pytest --pyargs gdxpds
+  imports:
+    - gdx-pandas
+    - gdxpds.test
 
 about:
   home: "https://github.com/NREL/gdx-pandas"
